@@ -45,7 +45,7 @@ Dealing with this amount of skew, is beyond the scope of this mini series. Inste
 
 The 2nd data set still taken from `2019` further filtering was done by taking a list of HLTVs Top 30 rankings at the end of each month - current week was used for September. Which gives us HLTV Top 30 "Top 47" and passed as 2 lists meaning all results are between teams which featured in the Top 30 in 2019. Maps which ended in overtime were also removed.
 
-| Alternative Data Set |
+| Alternative Data Set | &nbsp; | &nbsp; |
 | --- |:--:|:--:|
 | Format | Count | Unique Teams |
 | Best of 3 | 1001 | 47 |
