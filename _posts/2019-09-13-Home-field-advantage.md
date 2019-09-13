@@ -4,7 +4,6 @@ title: Home Field Advantage
 subtitle: Does it exist in CounterStrike?
 published: true
 ---
-
 It's a pretty simply principle, that is, until you look closer and uncover findings such as; *Referee decisions concerning penalty decisions are also more likely not to be correct when the match takes place in a stadium without a running track.* (Dohmen, 2005, p. 2). And thus starts a road of data mining, which stadiums have running tracks, was there mention to the number of lanes? All in an attempt to better quantify the simple Home Field Advantage (HFA). If that's you, stop. Don't do it yourself, come back from the edge.
 
 ## Exploring advantages in CounterStrike
@@ -23,16 +22,10 @@ I suggest Home Advantage be defined as the `map chosen` in the veto process of a
 
 ### The Data
 
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
-
 Using a database of results, and using `year = 2019` as our first filter, we get the following groups
 
-| Results by Format | &nbsp; | &nbsp; |
-| --- | :---: | :---: |
 | Format | Count | Unique Teams |
+| --- | :---: | :---: |
 | Best of 5 | 46 | 73 |
 | Best of 2 | 148 | 49 |
 | Best of 1 | 2072 | 503  |
