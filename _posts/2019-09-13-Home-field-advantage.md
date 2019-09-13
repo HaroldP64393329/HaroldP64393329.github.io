@@ -25,7 +25,7 @@ I suggest Home Advantage be defined as the `map chosen` in the veto process of a
 
 Using a database of results, and using `year = 2019` as our first filter, we get the following groups
 
-| Results by Format |||
+| Results by Format | &nbsp; | &nbsp; |
 | --- |:--:|:--:|
 | Format | Count | Unique Teams |
 | Best of 5 | 46 | 73 |
