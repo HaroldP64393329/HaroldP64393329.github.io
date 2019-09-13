@@ -32,14 +32,14 @@ Using a database of results, and using `year = 2019` as our first filter, we get
 | Best of 2 | 148 | 49 |
 | Best of 1 | 2072 | 503  |
 | Best of 3 | 2939 | 739 |
-*Fig. 1 Results grouped by format*
+*Table. 1 Results grouped by format*
 
 On the face of it, 739 unique teams is a good chunk, compared with a quick skim of 7 professional football leagues in 7 European Countries yields only 120 teams. Spend enough time with the data (*like me, I don't suggest it*) and you'll soon realise if you hadn't before, that a large % of these *teams* are infact going to be mix teams which have come together for a short period of time - typically the first few rounds of a tournament HLTV deems worth recording. 
 
 Including these teams in our population is going to create noise as they will only play a small number of games, consider the shape of this histogram below.
 
 !missing
-*Fig. 2 Data binning decided with the Freedman–Diaconis rule*
+*Fig. 1 Data binning decided with the Freedman–Diaconis rule*
 
 Dealing with this amount of skew, is beyond the scope of this mini series. Instead I'll suggest an alternative data set. 
 
@@ -49,7 +49,7 @@ The 2nd data set still taken from `2019` further filtering was done by taking a 
 | --- | :---: | :---: |
 | Format | Count | Unique Teams |
 | Best of 3 | 1001 | 47 |
-*Fig. 3 Results grouped by format*
+*Table. 2 Results grouped by format*
 
 Using the available veto data, teams have been swapped to the designations Home & Away, we can see both 3DMAX and AGO have swapped roles between Inferno and Overpass. Spirit and Syman only have 1 map, the 2nd went into overtime. 
 
