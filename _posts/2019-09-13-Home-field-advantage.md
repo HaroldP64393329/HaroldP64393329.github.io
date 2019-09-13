@@ -9,9 +9,9 @@ It's a pretty simply principle, that is, until you look closer and uncover findi
 
 ## Exploring advantages in CounterStrike
 
-Given that the Home Advantage is almost expected in any simple rating system written about in recent memory, it's worth exploring in the context of CounterStrike. Home Advantage can be defined for our purposes as carrying a statistically significant advantage over playing at an away venue. 
+Given that the Home Advantage is a given in any simple rating system, can it applied to CounterStrike? Home Advantage can be defined for our purposes as carrying a statistically significant advantage over playing at an away venue. 
 
-What can be considered Home Advantage in the game of CounterStrike? 
+What can be considered *Home* in the game of CounterStrike? 
 
 LAN is the truest home of the game CounterStrike, not just for its teams but for the game itself. The ability to run unencumbered on a LAN gives the full experience of CounterStrike, since the release of QuakeWorld (a Quake MP client) in 1998, client-server architecture has always been a technical challenge for fast-paced multiplayer games. Anyone with further interest in this area I suggest [*Fast-Paced Multiplayer (Part I): Client-Server Game Architecture*](https://www.gabrielgambetta.com/client-server-game-architecture.html) (Gambetta, Unknown) or [*I Shot You First: Networking the Gameplay of HALO: REACH*](https://www.gdcvault.com/play/1014345/I-Shot-You-First-Networking) (Aldrigde, 2011)
 
@@ -108,3 +108,8 @@ Ttest_indResult(statistic=2.177434703635481, pvalue=0.032006620596829065)
 {% endhighlight %}
 
 The result is in and `P` < `0.05` therefore the null hypothesis can be rejected and accept my suggested alternate. There is a home **map** advantage at play in our results.
+
+___
+**References**
+
+Dohmen, Thomas. Social Pressure Influences Decisions of Individuals Evidence from the Behavior of Football Referees. IZA, 2005.
