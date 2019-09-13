@@ -23,6 +23,11 @@ I suggest Home Advantage be defined as the `map chosen` in the veto process of a
 
 ### The Data
 
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
 Using a database of results, and using `year = 2019` as our first filter, we get the following groups
 
 | Results by Format | &nbsp; | &nbsp; |
