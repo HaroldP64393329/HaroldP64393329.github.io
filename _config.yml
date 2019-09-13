@@ -164,6 +164,7 @@ paginate: 5
 
 kramdown:
   input: GFM
+  math_engine: katex
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
