@@ -24,12 +24,12 @@ I suggest Home Advantage be defined as the `map chosen` in the veto process of a
 
 Using a database of results, and using `year = 2019` as our first filter, we get the following groups
 
-| Format | Count | Unique Teams |
-| --- | :---: | :---: |
-| Best of 5 | 46 | 73 |
-| Best of 2 | 148 | 49 |
-| Best of 1 | 2072 | 503  |
-| Best of 3 | 2939 | 739 |
+| Format    | Count | Unique Teams |
+| ---       | :---: | :---:        |
+| Best of 5 | 46    | 73           |
+| Best of 2 | 148   | 49           |
+| Best of 1 | 2072  | 503          |
+| Best of 3 | 2939  | 739          |
 *Table. 1 Results grouped by format*
 
 On the face of it, 739 unique teams is a good chunk, compared with a quick skim of 7 professional football leagues in 7 European Countries yields only 120 teams. Spend enough time with the data (*like me, I don't suggest it*) and you'll soon realise if you hadn't before, that a large % of these *teams* are infact going to be mix teams which have come together for a short period of time - typically the first few rounds of a tournament HLTV deems worth recording. 
