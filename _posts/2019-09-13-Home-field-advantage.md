@@ -26,7 +26,7 @@ I suggest Home Advantage be defined as the `map chosen` in the veto process of a
 Using a database of results, and using `year = 2019` as our first filter, we get the following groups
 
 | Results by Format | &nbsp; | &nbsp; |
-| --- |:---:|:---:|
+| --- | :---: | :---: |
 | Format | Count | Unique Teams |
 | Best of 5 | 46 | 73 |
 | Best of 2 | 148 | 49 |
@@ -46,7 +46,7 @@ Dealing with this amount of skew, is beyond the scope of this mini series. Inste
 The 2nd data set still taken from `2019` further filtering was done by taking a list of HLTVs Top 30 rankings at the end of each month - current week was used for September. Which gives us HLTV Top 30 "Top 47" and passed as 2 lists meaning all results are between teams which featured in the Top 30 in 2019. Maps which ended in overtime were also removed.
 
 | Alternative Data Set | &nbsp; | &nbsp; |
-| --- |:---:|:---:|
+| --- | :---: | :---: |
 | Format | Count | Unique Teams |
 | Best of 3 | 1001 | 47 |
 *Fig. 3 Results grouped by format*
