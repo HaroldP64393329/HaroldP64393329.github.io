@@ -2,6 +2,7 @@
 layout: post
 title: Home Field Advantage
 subtitle: Does it exist in CounterStrike?
+published: true
 ---
 
 It's a pretty simply principle, that is, until you look closer and uncover findings such as; *Referee decisions concerning penalty decisions are also more likely not to be correct when the match takes place in a stadium without a running track.* (Dohmen, 2005, p. 2). And thus starts a road of data mining, which stadiums have running tracks, was there mention to the number of lanes? All in an attempt to better quantify the simple Home Field Advantage (HFA). If that's you, stop. Don't do it yourself, come back from the edge.
@@ -104,7 +105,6 @@ from scipy import stats
 df = pd.read_csv("load/t_test.csv")
 stats.ttest_ind(df['home'], df['away'])
 Ttest_indResult(statistic=2.177434703635481, pvalue=0.032006620596829065)
-{% highlight python linenos %}
+{% endhighlight %}
 
 The result is in and `P` < `0.05` therefore the null hypothesis can be rejected and accept my suggested alternate. There is a home **map** advantage at play in our results.
-
