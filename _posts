@@ -1,0 +1,40 @@
+---
+layout: post
+title: Home Advantage
+published: false
+subtitle: Does it exist in CounterStrike?
+date: '2019-09-13'
+---
+How do you quantify something for inclusion in a model? Model or modelling shouldn't be a new term for anyone involved in the domain of predicting sporting events, just don't confuse it with *data science*, we're not selling adverts... 
+
+Typically people fall into two categories, Computer Group[1]: The Next Generation and No Computer Group: I can use my brain. I'm poking fun but there are a lot of savvy people who may lack the ability but fundamentally understand the benefit of a model, there's also those who believe it just cannot be done due to *reasons*.
+
+Hopefully what I'm going to outline here, is less about the accuracy of the predictor but the process by which you can form a statistically supported opinion on if X is related to Y. Let's get to it.
+
+## Background
+
+The idea of home advantage is pretty simple, do sports teams have greater success at home? The general answer is yes they do, in quantifying why researchers have findings such as *Referee decisions concerning penalty decisions are also more likely not to be correct when the match takes place in a stadium without a running track.* (Dohmen, 2005, p. 2)
+
+CounterStrike has no ingame referee, the server with preconfigured settings acts as judge, jury and executioner (of code). And CounterStrike games have no home, so whats left?
+
+LAN is the truest home of the game CounterStrike, not for its teams but for the game itself. The ability to run unencumbered on a LAN gives the full experience of CounterStrike, since the release of QuakeWorld (a Quake MP client) in 1998, client-server architecture has always been a technical challenge for fast-paced multiplayer games. Anyone with further interest in this area I suggest [*Fast-Paced Multiplayer (Part I): Client-Server Game Architecture*](https://www.gabrielgambetta.com/client-server-game-architecture.html) (Gambetta, Unknown) and [*I Shot You First: Networking the Gameplay of HALO: REACH*](https://www.gdcvault.com/play/1014345/I-Shot-You-First-Networking) (Aldrigde, 2011)
+
+So what about the teams themselves? At the StarLadder Berlin Major, the final 16 didn't have 1 single German representative. Wether played online or LAN, there's next to nothing that would realistically replace a home stadium. What we do have in it's place is the veto system employed by numerous Tournament Organisers (TOs).
+
+## The Question
+
+Does the traditional belief of an underlying advantage for the home team have statistical significance when determined as the map chosen in a Best of 3 (bo3)?
+
+## Data
+
+
+
+
+
+___
+[1] Computer Group: An infamous betting group
+
+**References**
+Dohmen, Thomas. Social Pressure Influences Decisions of Individuals Evidence from the Behavior of Football Referees. IZA, 2005.
+
+
