@@ -25,7 +25,15 @@ So what about the teams themselves? At the StarLadder Berlin Major, the final 16
 
 Does the traditional belief of an underlying advantage for the home team have statistical significance when determined as the map chosen in a Best of 3 (bo3)?
 
+## Hypothesis
+
+H0 (Null hypothesis): there is no significant difference in the odds of winning the map picked by 'home' team vs. not having picked the map. 
+HA (Alternative hypothesis): there is a statistically significant difference in the odds of winning the map picked by 'home'.
+
 ## Data
+
+The veto in a bo3 is the easiest method by which to identify who picked what, the test will be high level and won't go to a granular level.
+
 
 ___
 
