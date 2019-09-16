@@ -41,15 +41,17 @@ Being very familar with the population I knew full well, this would be problemat
 ![Total games played histogram]({{site.baseurl}}/img/hfa_histogram_1.png)
 *Fig. 1 histogram of games played count*
 
-The above histogram illustrates the problem, to further illustrate the problem I picked a team at random. The group of 5 players calling themselves `chebran` played exactly 2 games during the DreamHack Open qualifier (France), they played a bo1 and a single bo3 to qualify. According to a HLTV news article they reached out publically for sponsorship and gained this in the form of a PC parts company called Instinct. 
+The above histogram illustrates the problem, to further illustrate the problem I picked a team at random. This group of 5 players calling themselves `chebran` played exactly 2 games during the DreamHack Open qualifier (France), they played a bo1 and a single bo3 to qualify. According to a HLTV news article they reached out publically for sponsorship and gained this in the form of a PC parts company called Instinct. 
 
 For the DreamHack Open Tour they played under the name `Instinct Gaming` being eliminated in the Group Stage, which for the DreamHack format is again, 1 bo1 and 1 bo3. 4 months later 3 of the 5 people on this *team* appeared in another tournament qualifier under the name `FiveG` but only in 1 bo1.
 
+The open nature of CounterStrike and lack of financial stability for organisations to form, lends itself to this type of natural behaviour. 
 
+Whatever it is you plan to model, be sure to understand it's quirks.
 
 ### The alternative
 
-Tracking rosters
+
 
 ___
 
