@@ -45,9 +45,9 @@ The above histogram illustrates the problem, to further illustrate the problem I
 
 For the DreamHack Open Tour they played under the name `Instinct Gaming` being eliminated in the Group Stage, which for the DreamHack format is again, 1 bo1 and 1 bo3. 4 months later 3 of the 5 people on this *team* appeared in another tournament qualifier under the name `FiveG` but only in 1 bo1.
 
-The open nature of CounterStrike and lack of financial stability for organisations to form, lends itself to this type of natural behaviour. 
+Let's take another example, this time it's a stable roster currently under the name Aristocracy, has so far in 2019 also competed as Kinguin and devils.one, totalling all these games (bo3) together raises them up from just 20 games to 37. 
 
-Whatever it is you plan to model, be sure to understand it's quirks.
+
 
 ### The alternative
 
@@ -56,6 +56,7 @@ Whatever it is you plan to model, be sure to understand it's quirks.
 ___
 
 **References**
+
 Dohmen, Thomas. Social Pressure Influences Decisions of Individuals Evidence from the Behavior of Football Referees. IZA, 2005.
 
 HLTV (2019). *Instinct to support chebran at DreamHack Open Tours*. Retrieved from https://www.hltv.org/news/26703/instinct-to-support-chebran-at-dreamhack-open-tours
