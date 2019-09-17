@@ -36,20 +36,24 @@ All results will be from a Best of 3 (bo3) game. Assuming the veto data is avail
 
 ### There's always a problem.
 
-Being very familar with the population I knew full well, this would be problematic. Consider the following mean and standard deviation `9.271394`, `12.44979` respectively. Seems skewed to put it lightly. 
+Being very familar with the population I knew full well, this would be problematic. Consider the following mean and standard deviation (sd) `9.271394`, `12.44979` respectively. Seems skewed to put it lightly. 
 
 ![Total games played histogram]({{site.baseurl}}/img/hfa_histogram_1.png)
-*Fig. 1 histogram of games played count*
+*Fig. 1 histogram of games played count, binned simply by whole number [1,2,3]*
 
 The above histogram illustrates the problem, to further illustrate the problem I picked a team at random. This group of 5 players calling themselves `chebran` played exactly 2 games during the DreamHack Open qualifier (France), they played a bo1 and a single bo3 to qualify. According to a HLTV news article they reached out publically for sponsorship and gained this in the form of a PC parts company called Instinct. 
 
 For the DreamHack Open Tour they played under the name `Instinct Gaming` being eliminated in the Group Stage, which for the DreamHack format is again, 1 bo1 and 1 bo3. 4 months later 3 of the 5 people on this *team* appeared in another tournament qualifier under the name `FiveG` but only in 1 bo1.
 
-Let's take another example, this time it's a stable roster currently under the name Aristocracy, has so far in 2019 also competed as Kinguin and devils.one, totalling all these games (bo3) together raises them up from just 20 games to 37. 
+Let's take another example, this time it's a stable roster currently under the name Aristocracy, they've so far in 2019 also competed as Kinguin and devils.one, totalling all these games (bo3) together raises them up from just 20 games to 37.
 
+I added some adjustments which tracks groups of players through the year and groups together results where they played together but did so under different team names, it's an imperfect solution as there are other considerations but for the basis of this article, it will be "good enough".
 
+### Sample size
 
-### The alternative
+In 2019 there were 3804 bo3s which fit my criteria, I recently changed my data collection practises to cut down on the amount of 'pollution' I was also receiving. I don't need every result in the population to prove independence, I can sample and use `Cohen's D` to ensure my sample is large enough. 
+
+$$ d = \frac { (\bar{x}_{2} - \bar{x}_{1}) }{ \sqrt{(\sigma_1^2 + \sigma_2^2)/2} } $$
 
 
 
