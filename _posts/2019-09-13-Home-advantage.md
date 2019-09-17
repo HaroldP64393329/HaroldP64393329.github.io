@@ -120,6 +120,8 @@ With a `p-value < 0.01` HA can be accepted, there is a statiscal advantage to th
 
 ___
 
+[1]: Computer Group, https://en.wikipedia.org/wiki/Michael_Kent
+
 **References**
 
 Dohmen, Thomas. Social Pressure Influences Decisions of Individuals Evidence from the Behavior of Football Referees. IZA, 2005.
