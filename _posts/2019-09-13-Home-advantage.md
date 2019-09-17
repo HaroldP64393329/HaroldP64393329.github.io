@@ -124,4 +124,4 @@ ___
 
 Dohmen, Thomas. Social Pressure Influences Decisions of Individuals Evidence from the Behavior of Football Referees. IZA, 2005.
 
-HLTV (2019). *Instinct to support chebran at DreamHack Open Tours*. Retrieved from (https://www.hltv.org/news/26703/instinct-to-support-chebran-at-dreamhack-open-tours)[https://www.hltv.org/news/26703/instinct-to-support-chebran-at-dreamhack-open-tours]
+HLTV (2019). *Instinct to support chebran at DreamHack Open Tours*. Retrieved from [https://www.hltv.org/news/26703/instinct-to-support-chebran-at-dreamhack-open-tours]
