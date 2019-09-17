@@ -15,7 +15,7 @@ Hopefully what I'm going to outline here, is less about the accuracy of the pred
 
 The idea of home advantage is pretty simple, do sports teams have greater success at home? The general answer is yes they do, in quantifying why researchers have findings such as *Referee decisions concerning penalty decisions are also more likely not to be correct when the match takes place in a stadium without a running track.* (Dohmen, 2005, p. 2)
 
-CounterStrike has no ingame referee, the server with preconfigured settings acts as judge, jury and executioner (of code). And CounterStrike games have no home, so whats left?
+Such things make sense in the context of traditional sports, the pitch is of set dimensions, the quality is presumably meeting the standard so other variables must be at play. CounterStrike has no ingame referee, the server cannot be bias, swayed or bribed, so whats left?
 
 LAN is the truest home of the game CounterStrike, not for its teams but for the game itself. The ability to run unencumbered on a LAN gives the full experience of CounterStrike, since the release of QuakeWorld (a Quake MP client) in 1998, client-server architecture has always been a technical challenge for fast-paced multiplayer games. Anyone with further interest in this area I suggest [*Fast-Paced Multiplayer (Part I): Client-Server Game Architecture*](https://www.gabrielgambetta.com/client-server-game-architecture.html) (Gambetta, Unknown) and [*I Shot You First: Networking the Gameplay of HALO: REACH*](https://www.gdcvault.com/play/1014345/I-Shot-You-First-Networking) (Aldrigde, 2011)
 
