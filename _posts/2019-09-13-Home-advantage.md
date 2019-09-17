@@ -51,11 +51,70 @@ I added some adjustments which tracks groups of players through the year and gro
 
 ### Sample size
 
-In 2019 there were 3804 bo3s which fit my criteria, I recently changed my data collection practises to cut down on the amount of 'pollution' I was also receiving. I don't need every result in the population to prove independence, I can sample and use `Cohen's D` to ensure my sample is large enough. 
+In 2019 there were 3804 bo3s which fit my criteria, I don't need every result in the population to test independence, `R` or `python` will take all the grunt work out.
 
-$$ d = \frac { (\bar{x}_{2} - \bar{x}_{1}) }{ \sqrt{(\sigma_1^2 + \sigma_2^2)/2} } $$
+{% highlight python linenos %}
+import numpy as np
+from statsmodels.stats.power import TTestIndPower
 
+onep = TTestIndPower()
 
+# win %
+mean_home = 0.5507361
+mean_away = 0.4492639
+
+difference = 0.053252
+
+# sd
+# in the data they're identical
+sd = 0.4974845849
+
+# simplified cohen's d for equal sample sizes
+# sqrt((sd1^2) + (sd2^2) / 2)
+sd_pooled = np.sqrt(sd/2)
+
+cohens = difference / sd_pooled
+alpha = 0.05
+power = 0.95
+ratio = 1.0 # 3804/3804
+
+# get sample size
+sample_size = onep.solve_power(cohens, power=power, nobs1=None, ratio=ratio, alpha=alpha)
+sample_size
+2280.6432656464485
+
+{% endhighlight %}
+
+In order to be confident (95% confident or *alpha*) that H0 can be rejected and be confident (95% again or *power*) that it wasn't a false negative (home advantage exists but it was missed). 61% of the results need to sampled. And the data is **hella ugly** needs some help getting into shape.
+
+### Bootstrapping
+
+Everyone is throwing around machine learning lingo nowadays so why should I be any different? Anyway...
+
+{% highlight python linenos %}
+sample_home = []
+sample_away = []
+sample=2281
+
+for _ in range(1000):
+	boot_mean = np.random.choice(ht_win_array, size=sample).mean()
+    sample_home.append(boot_mean)
+    
+for _ in range(1000):
+	boot_mean = np.random.choice(at_win_array, size=sample).mean()
+    sample_away.append(boot_mean)
+ 
+# Our survey says?
+statst.ttest_ind(sample_home, sample_away)
+Ttest_indResult(statistic=214.41707249765153, pvalue=0.0)
+
+{% endhighlight %}
+
+![article-home-adv-win-rates.png]({{site.baseurl}}/img/article-home-adv-win-rates.png)
+
+### In conclusion
+
+With a `p-value < 0.01` HA can be accepted, there is a statiscal advantage to the map picked and the odds of winning it. Which sounds pretty obvious to anyone familiar with CS, but obvious doesn't really cut it in statistical terms. And if the end goal is to quantify something in a model that will be used for sports prediction, you want to be sure *something* exists and by what confidence.
 
 ___
 
