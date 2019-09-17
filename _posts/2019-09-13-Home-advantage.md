@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Home Advantage
-published: false
+published: true
 subtitle: Does it exisit in CounterStrike?
 date: '2019-09-14'
 ---
