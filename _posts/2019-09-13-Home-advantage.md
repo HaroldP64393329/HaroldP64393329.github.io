@@ -28,6 +28,7 @@ Does the traditional belief of an underlying advantage for the home team have st
 ## Hypothesis
 
 H0 (Null hypothesis): there is no significant difference in the odds of winning the map picked by 'home' team vs. not having picked the map. 
+
 HA (Alternative hypothesis): there is a statistically significant difference in the odds of winning the map picked by 'home'.
 
 ## Data
