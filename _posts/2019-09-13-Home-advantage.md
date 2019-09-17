@@ -111,7 +111,7 @@ Ttest_indResult(statistic=214.41707249765153, pvalue=0.0)
 {% endhighlight %}
 
 ![article-home-adv-win-rates.png]({{site.baseurl}}/img/article-home-adv-win-rates.png)
-Fig. 2 Peaks of Bill 
+*Fig. 2 Peaks of Bill*
 
 ### In conclusion
 
