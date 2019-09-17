@@ -7,7 +7,7 @@ date: '2019-09-14'
 ---
 How do you quantify something for inclusion in a model? Model or modelling shouldn't be a new term for anyone involved in the domain of predicting sporting events, just don't confuse it with *data science*, we're not selling adverts... 
 
-Typically people fall into two categories, Computer Group[1]: The Next Generation and No Computer Group: I can use my brain. I'm poking fun but there are a lot of savvy people who may lack the ability but fundamentally understand the benefit of a model, there's also those who believe it just cannot be done due to *reasons*.
+Typically people fall into two categories, Computer Group\[1\]: The Next Generation and No Computer Group: I can use my brain. I'm poking fun but there are a lot of savvy people who may lack the ability but fundamentally understand the benefit of a model, there's also those who believe it just cannot be done due to *reasons*.
 
 Hopefully what I'm going to outline here, is less about the accuracy of the predictor but the process by which you can form a statistically supported opinion on if X is related to Y. Let's get to it.
 
@@ -120,7 +120,7 @@ With a `p-value < 0.01` HA can be accepted, there is a statiscal advantage to th
 
 ___
 
-[1]: Computer Group, https://en.wikipedia.org/wiki/Michael_Kent
+\[1\]: Computer Group, https://en.wikipedia.org/wiki/Michael_Kent
 
 **References**
 
