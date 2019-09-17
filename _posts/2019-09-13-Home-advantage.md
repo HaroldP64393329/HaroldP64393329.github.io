@@ -99,11 +99,11 @@ sample=2281
 
 for _ in range(1000):
 	boot_mean = np.random.choice(ht_win_array, size=sample).mean()
-    sample_home.append(boot_mean)
+    	sample_home.append(boot_mean)
     
 for _ in range(1000):
 	boot_mean = np.random.choice(at_win_array, size=sample).mean()
-    sample_away.append(boot_mean)
+    	sample_away.append(boot_mean)
  
 # Our survey says?
 statst.ttest_ind(sample_home, sample_away)
