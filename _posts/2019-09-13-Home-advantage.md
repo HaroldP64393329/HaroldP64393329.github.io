@@ -52,7 +52,7 @@ I added some adjustments which tracks groups of players through the year and gro
 
 ### Sample size
 
-In 2019 there were 3804 bo3s which fit my criteria, I don't need every result in the population to test independence, `R` or `python` will take all the grunt work out.
+Arriving at the proper sample size requires more than just eyeballing it and convincing yourself "thats about right", here's an approach. In 2019 there were 3804 bo3s which fit my criteria, I don't need every result in the population to test independence, `R` or `python` will take all the grunt work out. This is a python example for `Cohen's D` and `A-priori`.
 
 {% highlight python linenos %}
 import numpy as np
@@ -69,6 +69,10 @@ difference = 0.053252
 # sd
 # in the data they're identical
 sd = 0.4974845849
+
+# usually you would take the sd from both
+# square them and take the square root
+# see below.
 
 # simplified cohen's d for equal sample sizes
 # sqrt((sd1^2) + (sd2^2) / 2)
