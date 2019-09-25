@@ -19,13 +19,13 @@ I'm going to create a P&L based on football (soccer) and pull scores down from t
 
 - **Simple results layout** Navigating to their page for current season (2019-2020) results on the English Premier League, it's a simple 1 page layout, previous weeks are eventually cached away and served by clicking a `show more` link but there are better sources specifically for historic football data which don't require scraping.
 
-- **Clean URLs** FlashScore employs some very simple conventions in their URLs, take for example *football/england/premier-league/*, if I wanted instead the National League it becomes *football/england/national-league*. Contrast this against WhoScored who also add in their specific unique identifiers the same division becomes *Regions/252/Tournaments/2/England-Premier-League*
+- **Clean URLs** FlashScore employs some very simple conventions in their URLs, take for example `football/england/premier-league/`, if I wanted instead the National League it becomes `football/england/national-league`. Contrast this against WhoScored who also add in their specific unique identifiers the same division becomes `Regions/252/Tournaments/2/England-Premier-League`
 
 ### Admin
 
 I will attempt to document as much as possible, but on an A-Z style guide, you should consider this guide starting somewhere around **X**. 
 
-- `gspread_pd` requires a token in order to pull down your spreadsheet. Setup is available in this guide [Using OAuth2 for Authentication](https://gspread.readthedocs.io/en/latest/oauth2.html). You need to share the spreadsheet as well from google sheets (gsheets) using the email contained in the json key e.g. someone\@someone-1234.iam.gserviceaccount.com
+- `gspread_pd` requires a token in order to pull down your spreadsheet. Setup is available in this guide [Using OAuth2 for Authentication](https://gspread.readthedocs.io/en/latest/oauth2.html). You need to share the spreadsheet as well from google sheets (gsheets) using the email contained in the json key e.g. someone@someone-1234.iam.gserviceaccount.com
 
 - New to scraping, not new to scraping. Refresh yourself [How to prevent getting blacklisted while scraping](https://www.scrapehero.com/how-to-prevent-getting-blacklisted-while-scraping/)
 
@@ -36,14 +36,14 @@ I will attempt to document as much as possible, but on an A-Z style guide, you s
 The inspect element tool isn't just good for degenerates to fake their betting slips, it's also handy in pulling out specifics about a website under the hood.
 
 ![pnl_inspect_element_1.png]({{site.baseurl}}/img/pnl_inspect_element_1.png)
-<p align="center">*Fig. 1 Each result row has some common classes*</p>
+*<p align="center">Fig. 1 Each result row has some common classes</p>*
 
 Clicking around the first result row shows me the following in Fig. 1 there's a `div` (think of it as a container if you're not familiar with html) with a unique identifier (g_1_4tJXu8C7) and the classes `event__match event__match--static event__match--oneLine`.
 
 Classes are none unique and should be style elements, if thats true or not in this case doesn't matter, we can use them as selectors in BeautifulSoup.
 
 ![inspect element]({{site.baseurl}}/img/pnl_inspect_element.png)
-*Fig. 2 The Spanish Inquisition*
+*<p align="center">Fig. 2 The Spanish Inquisition</p>*
 
 This second div is a larger container for the whole data table, I've shown it here as later on it's a quick workaround to one of the results being missing, but common in most sites now there will be a container div with other smaller divs nested within it.  
 
@@ -59,10 +59,10 @@ from asyncio import get_event_loop as gel
 
 def main():
 
-	# Using the lxml parser for BeautifulSoup
+# Using the lxml parser for BeautifulSoup
     # attr is the classes discovered earlier as containing each row of data
     # path and the True flag take a fullsize screenshot of what the browser is seeing
-	url = 'https://www.flashscore.com/football/england/premier-league/'
+url = 'https://www.flashscore.com/football/england/premier-league/'
     lib = 'lxml'
     attr = 'sportName soccer'
     path = 'pypp.png'
@@ -82,10 +82,10 @@ from asyncio import get_event_loop as gel
 
 def main():
 
-	# Using the lxml parser for BeautifulSoup
+# Using the lxml parser for BeautifulSoup
     # attr is the classes discovered earlier as containing each row of data
     # path and the True flag take a fullsize screenshot of what the browser is seeing
-	url = 'https://www.flashscore.com/football/england/premier-league/'
+url = 'https://www.flashscore.com/football/england/premier-league/'
     lib = 'lxml'
     attr = 'event__match event__match--static event__match--oneLine'
     path = 'pypp.png'
@@ -149,4 +149,54 @@ print(result[0])
 
 {% endhighlight %}
 
+Now I've got a complete list of results, at least for the first 6 rounds of the season so far. I used the excellent csv provided from [football-data.co.uk](http://football-data.co.uk/) and mocked up a truly basic P&L. 
 
+![pnl_basic_sheet.png]({{site.baseurl}}/img/pnl_basic_sheet.png)
+
+I'm going to pull this into a dataframe and fill in the scores then send it back to the spreadsheet.
+
+{% highlight python linenos %}
+
+from gspread_pandas import conf, Client, Spread
+
+def main():
+	... all the other code ...
+    
+    file_dir = 'current_directory'
+    file_json = 'key.json'
+    scope = ['https://spreadsheets.google.com/feeds',
+    		 'https://www.googleapis.com/auth/drive']
+    config = conf.get_config(conf_dir=file_dir, file_name=file_json)
+    
+    # open the worksheet created above
+    worksheet = Spread('Profit & Loss', sheet='Football', config=config)
+    
+    # create a dataframe
+    # results start at B3 so skip the first 2 rows
+    df_worksheet = worksheet.sheet_to_df(index=0, header_rows=2)
+
+{% endhighlight %}
+
+I've now got a dataframe containing my wagers the columns `HG` and `AG` are empty, I'm going to match home and away team as well as the date to ensure the correct match is being filled in. Also the names used by Flashscore and those used by football-data differ slightly e.g. `Man City` in one record is `Manchester City` in the other. We can use a dictionary and the pandas function `apply` to transform the mismatches.
+
+{% highlight python linenos %}
+
+def team_transform(team):
+	team_short = {
+    	'Sheffield United': 'Sheffield Utd',
+        'Man City': 'Manchester City',
+        'Man United': 'Manchester Utd'
+    }
+    
+    # If the team doesn't need altering, send it back untouched.
+    return team_short.get(team, team)
+
+def main():
+	...
+    # column names are case sensitive
+    df_worksheet['Home'] = df_worksheet['Home'].apply(team_transform)
+    df_worksheet['Away'] = df_worksheet['Away'].apply(team_transform)
+    
+    
+
+{% endhighlight %}
