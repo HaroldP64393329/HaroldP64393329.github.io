@@ -36,14 +36,16 @@ I will attempt to document as much as possible, but on an A-Z style guide, you s
 The inspect element tool isn't just good for degenerates to fake their betting slips, it's also handy in pulling out specifics about a website under the hood.
 
 ![pnl_inspect_element_1.png]({{site.baseurl}}/img/pnl_inspect_element_1.png)
-*<p align="center">Fig. 1 Each result row has some common classes</p>*
+
+<p align="center"><em>Fig. 1 Each result row has some common classes</em></p>
 
 Clicking around the first result row shows me the following in Fig. 1 there's a `div` (think of it as a container if you're not familiar with html) with a unique identifier (g_1_4tJXu8C7) and the classes `event__match event__match--static event__match--oneLine`.
 
 Classes are none unique and should be style elements, if thats true or not in this case doesn't matter, we can use them as selectors in BeautifulSoup.
 
 ![inspect element]({{site.baseurl}}/img/pnl_inspect_element.png)
-*<p align="center">Fig. 2 The Spanish Inquisition</p>*
+
+<p align="center"><em>Fig. 2 The Spanish Inquisition</em></p>
 
 This second div is a larger container for the whole data table, I've shown it here as later on it's a quick workaround to one of the results being missing, but common in most sites now there will be a container div with other smaller divs nested within it.  
 
