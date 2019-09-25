@@ -234,4 +234,9 @@ The original module `gspread` and not the pandas offshoot we use here, may have 
 
 So I would advise if you find this idea useful, then build on top of it, using the worksheet pushed back to Google sheets as a reference sheet.
 
+___
+
+Full script available in [python-snippets repo](https://github.com/HaroldP64393329/python-snippets)
+
+
 
