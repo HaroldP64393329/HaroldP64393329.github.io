@@ -64,7 +64,7 @@ def main():
 # Using the lxml parser for BeautifulSoup
     # attr is the classes discovered earlier as containing each row of data
     # path and the True flag take a fullsize screenshot of what the browser is seeing
-url = 'https://www.flashscore.com/football/england/premier-league/'
+	url = 'https://www.flashscore.com/football/england/premier-league/'
     lib = 'lxml'
     attr = 'sportName soccer'
     path = 'pypp.png'
@@ -84,10 +84,10 @@ from asyncio import get_event_loop as gel
 
 def main():
 
-# Using the lxml parser for BeautifulSoup
+	# Using the lxml parser for BeautifulSoup
     # attr is the classes discovered earlier as containing each row of data
     # path and the True flag take a fullsize screenshot of what the browser is seeing
-url = 'https://www.flashscore.com/football/england/premier-league/'
+	url = 'https://www.flashscore.com/football/england/premier-league/'
     lib = 'lxml'
     attr = 'event__match event__match--static event__match--oneLine'
     path = 'pypp.png'
