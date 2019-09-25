@@ -21,7 +21,7 @@ I'm going to create a P&L based on football (soccer) and pull scores down from t
 
 - **Clean URLs** FlashScore employs some very simple conventions in their URLs, take for example `football/england/premier-league/`, if I wanted instead the National League it becomes `football/england/national-league`. Contrast this against WhoScored who also add in their specific unique identifiers the same division becomes `Regions/252/Tournaments/2/England-Premier-League`
 
-### Admin
+### Housekeeping
 
 I will attempt to document as much as possible, but on an A-Z style guide, you should consider this guide starting somewhere around **X**. 
 
