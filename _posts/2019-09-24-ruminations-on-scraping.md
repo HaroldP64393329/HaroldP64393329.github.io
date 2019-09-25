@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Butter up your P&L
-published: false
+published: true
 subtitle: Do you loathe admin?
 date: '2019-09-24'
 ---
@@ -148,3 +148,5 @@ print(result[0])
 # ['4tJXu8C7', datetime.datetime(2019, 9, 22, 0, 0), 'Arsenal', 'Aston Villa', '3', '2']
 
 {% endhighlight %}
+
+
