@@ -149,7 +149,7 @@ print(result[0])
 
 {% endhighlight %}
 
-Now I've got a complete list of results, at least for the first 6 rounds of the season so far. I used the excellent csv provided from [football-data.co.uk](http://football-data.co.uk/) and mocked up a truly basic P&L. 
+Now I've got a complete list of results, at least for the first 6 rounds of the season so far. I used the excellent csv provided from [football-data.co.uk](http://football-data.co.uk/) and mocked up a truly basic P&L. The lines to wager were drawn at random.
 
 ![pnl_basic_sheet.png]({{site.baseurl}}/img/pnl_basic_sheet.png)
 
@@ -174,6 +174,8 @@ def main():
     # create a dataframe
     # results start at B3 so skip the first 2 rows
     df_worksheet = worksheet.sheet_to_df(index=0, header_rows=2)
+    
+    return
 
 {% endhighlight %}
 
@@ -197,6 +199,37 @@ def main():
     df_worksheet['Home'] = df_worksheet['Home'].apply(team_transform)
     df_worksheet['Away'] = df_worksheet['Away'].apply(team_transform)
     
+    # loop over our results data
+    # and match them to the spreadsheet
+   	for result in results:
+    	df_worksheet.loc[(df_worksheet.Home == result[2]) &
+        				 (df_worksheet.Away == result[3]) &
+                         (df_worksheet.Date_Time == result[1]),
+                         ['HG','AG']] = result[4], result[5]
+	
+    # send it back to sheets
+    worksheet.df_to_sheet(df_worksheet, index=False, headers=False,
+    					  sheet='Football', start='A3', replace=False,
+                          raw_column_names=['Date_Time'])
     
+    return
 
 {% endhighlight %}
+
+All things being well, you'll now have an updated spreadsheet with results from Round 6.
+
+## Going further
+
+In the first scrape through, I noticed there's a popup window for match details, the url for one match is `/match/4tJXu8C7/#match-summary` I said when using inspect element that every row had a unique id (g_1_4tJXu8C7). And the URLs are very clean, to get statistics for the match the URL changes simply to `/match/4tJXu8C7/#match-statistics;0`.
+
+Not covered in this article, but for every match you could also pull down corners and cards for example if those are some of the markets you use. Match summary has details on goals and their timings, useful for maybe 1st/2nd Half Asian Handicap.
+
+There's a lot of extra data you could include in your results list and push back to Google Sheets.
+
+## Limitations
+
+The original module `gspread` and not the pandas offshoot we use here, may have better ways to solve this, but currently when we request the sheet, it pulls down everything. It then pushes backup, everything. It will overwrite any formulas etc
+
+So I would advise if you find this idea useful, then build on top of it, using the worksheet pushed back to Google sheets as a reference sheet.
+
+
