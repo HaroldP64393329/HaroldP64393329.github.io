@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: _posts/2019-10-24-Modelling-infrastructure.md
+title: Modelling infrastructure
 subtitle: 'Modelling Infrastructure, some considerations.'
 date: '2019-10-24'
 ---
